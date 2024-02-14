@@ -1,104 +1,101 @@
-@import './reset.scss';
-
-// Zmienne kolorów niebieskich
-$primary-color: #3498db;
-$secondary-color: #2980b9;
-$background-color: #ecf0f1;
-$text-color: #2c3e50;
-
+@import "./reset.scss";
+@import "/src/styles/variables";
+body {
+  background-image: url(/src/assets/103141-OLWA2H-889.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  height: 100vh;
+}
 // Styl nagłówka
 header {
-    background-color: $primary-color;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    
-    justify-content: center;
-    height: 100px;
+  background-color:rgba(00, 00, 00,0.4);;
+  color: white;
+  height: 4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+
+  .container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center;
     .logo {
-        width: 70px;
-        
+      width: 3.8rem;
+      height: 3.4rem;
+      
     }
     .logo-text {
-        width: 200px;
+      font-size: 3.6rem;
+      font-family: $font-logo;
+      font-weight: 400;
     }
-
+  }
 }
 
 // Styl formularza wyszukiwania
 .search-section {
-    text-align: center;
+    
+  display: flex;
+  align-items: center;
+//   justify-content: center;
+  flex-direction: column;
+  
+  font-family: $font-logo;
+  background-color: rgba(00, 00, 00,0.6);
+  height: 100vh;
+  box-shadow: 1px 1px 900px rgba(00, 00, 00,0.5);
 
-    h2 {
-        color: $primary-color;
-        margin-bottom: 10px;
-    }
-
-    form {
-        max-width: 400px;
-        margin: 0 auto;
-        
-        width: 100%;
-        label {
-            display: flex;
-            margin-bottom: 10px;
-            height: 50px;
-        }
-
-        input {
-
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid $primary-color;
-            border-radius: 5px;
-            font-size: 1em;
-        }
-
-        button {
-            background-color: $primary-color;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1em;
-
-            &:hover {
-                background-color: $secondary-color;
-            }
-        }
-    }
+  h2 {
+    color: white;
+    font-size: 2rem;
+  }
+  input{
+    border-radius: 25px;
+    width: 50rem;
+    font-size: 25px;
+    margin-right: 2rem;
+  }
+  button{
+    border-radius: 2.5rem;
+    width: 10rem;
+    font-size: 25px;
+    background-color: none;
+  }
+  h3{
+    align-items: center;
+  }
 }
-
-// Styl wyników wyszukiwania
-.results-section {
-    text-align: center;
-
-    h2 {
-        color: $primary-color;
-        margin-bottom: 10px;
-    }
-    ul{
+.results-section{
+    color: white;
+    overflow: scroll;
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
         li{
-            list-style: none;
-            
+            width: 100px;
+            margin: 0px;
+            background-color: rgba(00, 00, 00,0.4);
+            height: 180px;
+            width: 350px;
+            padding: 10px;
         }
     }
 }
-
 // Styl stopki strony
 footer {
-    background-color: $background-color;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: $background-color;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 
-    p {
-        margin: 0;
-        color: $text-color;
-    }
+  p {
+    margin: 0;
+    color: $text-color;
+  }
 }
