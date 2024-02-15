@@ -52,11 +52,18 @@ header {
     color: white;
     font-size: 2rem;
   }
+  select{
+    border-radius: 2.5rem;
+    width: 10rem;
+    font-size: 25px;
+    background-color: none;
+  }
   input{
     border-radius: 25px;
-    width: 50rem;
+    width: 50vw;
     font-size: 25px;
     margin-right: 2rem;
+    margin-left: 2rem;
   }
   button{
     border-radius: 2.5rem;
