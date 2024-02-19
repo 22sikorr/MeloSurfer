@@ -7,6 +7,7 @@ body {
   background-repeat: no-repeat;
   background-origin: padding-box;
   height: 100vh;
+  overflow: hidden;
 }
 // Styl nagłówka
 header {
@@ -145,9 +146,14 @@ header {
     align-items: center;
   }
 }
+.results-section::-webkit-scrollbar {
+  display: none;
+}
 .results-section{
     color: white;
     overflow: scroll;
+    
+    
     ul {
         display: flex;
         flex-wrap: wrap;
