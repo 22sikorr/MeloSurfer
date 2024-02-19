@@ -1,9 +1,10 @@
 export const ResultsList = ({ selected, results }) => {
-  if (selected === "song") {
+  
+  if (selected === "track") {
     return results.map((result, index) => (
       <li style={{ marginBottom: 15 }} key={index}>
         Tytuł:{result.name}
-        <br /> Wykonawca: {result.artist}
+        <br /> Wykonawca: {result.artists[0].name}
       </li>
     ));
   } else if (selected === "artist") {
@@ -12,16 +13,20 @@ export const ResultsList = ({ selected, results }) => {
         Imię / Psudonim: <br />
         {result.name}
         <br />
-        Słuchacze: {result.listeners}
+        Słuchacze: {result.followers.total}
         <br />
-        <img src={result.image[1].text} />
+        <img
+          style={{ width: 100, height: 100 }}
+          src={result.images[1].url}
+          alt="avatar artysty"
+        />
       </li>
     ));
   } else if (selected === "album") {
     return results.map((result, index) => (
       <li style={{ marginBottom: 15 }} key={index}>
         Tytuł:{result.name}
-        <br /> Wykonawca: {result.artist}
+        <br /> Wykonawca: {result.artists[0].name}
       </li>
     ));
   }
