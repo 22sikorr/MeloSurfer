@@ -52,24 +52,94 @@ header {
     color: white;
     font-size: 2rem;
   }
-  select{
+ 
+  
+  select {
+    width: 12rem;
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    border: 1px solid white;
     border-radius: 2.5rem;
-    width: 10rem;
-    font-size: 25px;
-    background-color: none;
+    color: white;
+    font-weight: 500;
+
+    padding: 5px;
+    width: 12rem;
+
+    border-radius: 35px;
+
+    box-shadow: 0 1px 3px -2px #9098a9;
+    cursor: pointer;
+    font-family: inherit;
+    
+    transition: all 150ms ease;
+    svg {
+      position: absolute;
+      right: 12px;
+      top: calc(50% - 3px);
+      width: 10px;
+      height: 6px;
+      stroke-width: 2px;
+      stroke: #9098a9;
+      fill: none;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      pointer-events: none;
+    }
+    
+    &:required:invalid {
+      color: #5a667f;
+      }
+      
+      option {
+        color: #223254;
+      }
+  
+      option[value=""][disabled] {
+        display: none;
+      }
+  
+      &:focus {
+        outline: none;
+        border-color: #07f;
+        box-shadow: 0 0 0 2px rgba(0, 119, 255, 0.2);
+      }
+  
+      &:hover + svg {
+        stroke: #07f;
+      }
+    }
+  
+  
+  .sprites {
+    position: absolute;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    user-select: none;
   }
+  
+  
   input{
     border-radius: 25px;
-    width: 50vw;
+    width: 24vw;
     font-size: 25px;
     margin-right: 2rem;
     margin-left: 2rem;
   }
   button{
-    border-radius: 2.5rem;
-    width: 10rem;
+    width: 12rem;
     font-size: 25px;
-    background-color: none;
+    background-color: transparent;
+    border: none;
+    border: 1px solid white;
+    border-radius: 2.5rem;
+    color: white;
+    cursor: pointer;
+    &:hover{
+
+    }
   }
   h3{
     align-items: center;
@@ -92,17 +162,4 @@ header {
         }
     }
 }
-// Styl stopki strony
-footer {
-  background-color: $background-color;
-  text-align: center;
-  padding: 10px;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 
-  p {
-    margin: 0;
-    color: $text-color;
-  }
-}
