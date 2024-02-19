@@ -1,7 +1,8 @@
-@import "./reset.scss";
-@import "/src/styles/variables";
+@import "./reset";
+@import "./variables";
+
 body {
-  background-image: url(/src/assets/103141-OLWA2H-889.jpg);
+  
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -138,9 +139,6 @@ header {
     border-radius: 2.5rem;
     color: white;
     cursor: pointer;
-    &:hover{
-
-    }
   }
   h3{
     align-items: center;

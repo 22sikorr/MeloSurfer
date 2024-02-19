@@ -6,10 +6,10 @@ const SearchSection = () => {
   const [inputValue, setInputValue] = useState("");
   const [results, setResults] = useState([]);
   const [selected, setSelected] = useState("track");
-  const api_key = "888eb641278d28ae3d72014e71a52a80";
   const [accessToken, setAccessToken] = useState(null);
 
   useEffect(() => {
+
     const fetchAccessToken = async () => {
       try {
         const response = await fetch("https://accounts.spotify.com/api/token", {
@@ -48,7 +48,7 @@ const SearchSection = () => {
     )
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.artists.items[0].images[1].url);
+        //console.log(data.artists.items[0].images[1].url);
         if (selected === "track") {
           setResults(data.tracks.items);
         } else if (selected === "artist") {
