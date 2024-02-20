@@ -93,7 +93,8 @@ const SearchSection = () => {
 
           <section className="results-section">
             <ul>
-              <ResultsList selected={selected} results={results} />
+
+              {results && <ResultsList selected={selected} results={results} />}
             </ul>
           </section>
         </section>
