@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Container } from "semantic-ui-react";
+
 
 import { ResultsList } from "./ResultsList.1";
 const SearchSection = () => {
@@ -26,6 +26,7 @@ const SearchSection = () => {
 
         const data = await response.json();
         setAccessToken(data.access_token);
+        console.log(data.access_token);
       } catch (error) {
         console.error("Error fetching access token:", error);
       }
@@ -69,7 +70,7 @@ const SearchSection = () => {
 
   return (
     <>
-      <Container>
+      <div className="container">
         <section className="search-section">
           <h2>Znajdź nowe Utwory</h2>
           <form id="search-form">
@@ -96,7 +97,7 @@ const SearchSection = () => {
             </ul>
           </section>
         </section>
-      </Container>
+      </div>
     </>
   );
 };
