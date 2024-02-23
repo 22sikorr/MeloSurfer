@@ -13,6 +13,7 @@ export const ResultsList = ({ selected, results }) => {
       </li>
     ));
   } else if (selected === "artist") {
+    console.log(results);
     return results.map((result, index) => (
       <li style={{ marginBottom: 15 }} key={index}>
         Imię / Psudonim: <br />
@@ -20,11 +21,11 @@ export const ResultsList = ({ selected, results }) => {
         <br />
         Słuchacze: <br /> <span>{result.followers.total}</span>
         <br />
-        {/* <img
+         <img
           style={{ width: 100, height: 100 }}
-          src={result.artists.images[0].url}
+          src={result.images[0]?.url}
           alt="artist image"
-        /> */}
+        />
       </li>
     ));
   } else if (selected === "album") {

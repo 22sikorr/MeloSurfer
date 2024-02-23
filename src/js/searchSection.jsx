@@ -54,6 +54,7 @@ const SearchSection = () => {
           setResults(data.tracks.items);
         } else if (selected === "artist") {
           setResults(data.artists.items);
+          console.log(data.artists.items);
         } else if (selected === "album") {
           setResults(data.albums.items);
         }
